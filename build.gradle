@@ -1,7 +1,9 @@
-task hello << {
-  print 'hello, '
+apply plugin: 'java'
+
+repositories {
+  mavenCentral()
 }
 
-task world(dependsOn: hello) << {
-  println 'world'
+dependencies {
+  testCompile "junit:junit:4.12"
 }
